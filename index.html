@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang='en'>
+
+<head>
+  <meta charset='UTF-8'>
+  <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+  <title>Flowestry</title>
+  
+  <link
+    href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&family=Quicksand:wght@300..700&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
+  <link rel="icon" type="image/png" href="./img/LogoSquare.png">
+  <link rel='stylesheet' type='text/css' href='styles.css'>
+  
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3/dist/gsap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3/dist/ScrollTrigger.min.js"></script>
+  <script src="script.js" defer></script>
+
+</head>
+
+<body>
+  <!-- NavBar ---------------------------------------------------------------------- -->
+  <header class="navbar">
+    <img class="logo" src="./img/LogoHor.png" alt="Logo Flowestry">
+    <button class="menu-toggle" aria-controls="nav-links" aria-expanded="false" aria-label="Abrir menú">
+      <i class="fa fa-sort-desc"></i>
+    </button>
+    <nav class="nav-links">
+      <a href="#about-us">Quiénes somos</a>
+      <a href="#services">Servicios</a>
+      <a href="#contact">Descubre más</a>
+    </nav>
+  </header>
+  <!-- Hero -------------------------------------------------------------------------- -->
+  <section class="hero" id="hero">
+    <div class="logo-container">
+      <img src="./img/LogoSquare.png" alt="Logo Flowestry">
+    </div>
+    <h2>El tapiz de la vida siempre reserva un lugar para las flores.<br> Nosotras lo dotamos de sentido.</h2>
+  </section>
+
+  <main>
+    <section class="projects" id="projects">
+      <div class="section-header">
+        <h2>My Projects</h2>
+        <h3>Come and Watch!</h3>
+      </div>
+
+      <div class="projects-grid">
+        <article class="project-card">
+          <img src="./assets/vortex_of_chaos.png" alt="Vortex Chaos" />
+          <h3 class="project-title">Vortex of Chaos</h3>
+          <div class="project-links">
+            <a href="https://github.com/lfernandezf11/Vortex_of_Chaos.git" class="icon-link"><i class="fa fa-github"
+                aria-hidden="true"></i></a>
+            <a href="https://lfernandezf11.github.io/Vortex_of_Chaos/" class="icon-view"><i class="fa fa-external-link"
+                aria-hidden="true"></i></a>
+          </div>
+        </article>
+
+      </div>
+  </main>
+</body>
+
+</html>
