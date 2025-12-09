@@ -1,6 +1,6 @@
 const toggle = document.querySelector('.menu-toggle');
 const nav = document.querySelector('.nav-links');
-const navLinks = document.querySelectorAll('.nav-links a'); 
+const navLinks = document.querySelectorAll('.nav-links a');
 const cards = document.querySelectorAll(".service-card");
 
 // Cuando se pulsa el toggle, se añade o elimina la clase .active, lo que hace que los nav-links se muestren (display:flex, menú abierto)
@@ -97,8 +97,7 @@ cards.forEach((card, index) => {
         trigger: card,
         start: "top 95%",
         end: "top 40%",
-        scrub: 0.5,
-        // markers: true // Descomentar para ver los marcadores del ScrollTrigger
+        scrub: 0.5
       }
     }
   );
@@ -110,7 +109,7 @@ cards.forEach((card, index) => {
     scrollTrigger: {
       trigger: card,
       start: "top 80%",
-      toggleActions: "play reverse play reverse" 
+      toggleActions: "play reverse play reverse"
     }
   });
 
@@ -121,7 +120,7 @@ cards.forEach((card, index) => {
     ease: "power2.out"
   }, "+=0.3"); // Empieza 0.2 segundos después de que el timeline inicie
 
-  
+
   textoTimeline.from(parrafo, {
     opacity: 0,
     y: 20,
@@ -130,3 +129,31 @@ cards.forEach((card, index) => {
   }, "<0.1"); // Empieza 0.1 segundos ANTES de que termine la animación anterior
 
 });
+
+/* ANIMACIÓN CTA -------------------------------------------------------------- */
+gsap.to(".cta-button", {
+  scale: 1.05,
+  yoyo: true, // Vuelve al estado inicial
+  repeat: -1, // Infinito
+  duration: 1.5,
+  ease: "power1.inOut"
+});
+
+/* ANIMACIÓN FOOTER ----------------------------------------------------------- */
+gsap.fromTo(".main-footer", 
+  {
+    opacity: 0,
+    y: 100 // Empieza 100px más abajo
+  },
+  {
+    opacity: 1,
+    y: 0, 
+    duration: 1.5,
+    ease: "bounce.out", 
+    scrollTrigger: {
+      trigger: ".main-footer",
+      start: "top 95%", 
+      toggleActions: "play reverse play reverse" 
+    }
+  }
+);

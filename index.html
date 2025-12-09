@@ -5,12 +5,14 @@
   <meta charset='UTF-8'>
   <meta name='viewport' content='width=device-width, initial-scale=1.0'>
   <title>urdimbbre</title>
-  
-  <link href="https://fonts.googleapis.com/css2?family=Lekton:ital,wght@0,400;0,700;1,400&family=Rampart+One&family=Roboto+Flex:opsz,wght@8..144,100..1000&display=swap" rel="stylesheet">
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Lekton:ital,wght@0,400;0,700;1,400&family=Rampart+One&family=Roboto+Flex:opsz,wght@8..144,100..1000&display=swap"
+    rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
   <link rel="icon" type="image/png" href="./img/LogoSquare.png">
   <link rel='stylesheet' type='text/css' href='styles.css'>
-  
+
   <script src="https://cdn.jsdelivr.net/npm/gsap@3/dist/gsap.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/gsap@3/dist/ScrollTrigger.min.js"></script>
   <script src="script.js" defer></script>
@@ -20,7 +22,7 @@
 <body>
   <!-- NavBar ---------------------------------------------------------------------- -->
   <header class="navbar">
-    <img class="logo" src="./img/LogoHor.png" alt="Logo Urdimbre">
+    <a href="#hero"><img class="logo" src="./img/LogoHor.png" alt="Logo Urdimbre"></a>
     <button class="menu-toggle" aria-controls="nav-links" aria-expanded="false" aria-label="Abrir menú">
       <i class="fa fa-sort-desc"></i>
     </button>
@@ -40,79 +42,119 @@
 
   <main>
     <section class="services" id="services">
-  <div class="section-header">
-    <h2>Servicios</h2>
-    <p>Acompañamos tu proyecto digital desde la idea hasta el despliegue.</p>
-  </div>
+      <div class="section-header">
+        <h2>Servicios</h2>
+        <p>Acompañamos tu proyecto digital desde la idea hasta el despliegue.</p>
+      </div>
 
-  <div class="services-container">
-    <!-- Servicio 1 -->
-    <article class="service-card">
-      <div class="service-info">
-      <h3>Desarrollo de aplicaciones web a medida</h3>
-      <p>
-        Creamos sitios y aplicaciones web totalmente personalizados para tu negocio,
-        desde landing pages hasta plataformas de gestión internas. Diseñamos cada
-        proyecto pensando en tus objetivos, en la experiencia de tus usuarios y en
-        la posibilidad de escalar en el futuro.
-      </p>
-      </div>
-      <div class="service-image">
-        <img src="./img/code.jpg" alt="Desarrollo web a medida">
-      </div>
-      
-    </article>
+      <div class="services-container">
+        <!-- Servicio 1 -->
+        <article class="service-card">
+          <div class="service-info">
+            <h3>Desarrollo de aplicaciones web a medida</h3>
+            <p>
+              Creamos sitios y aplicaciones web totalmente personalizados para tu negocio,
+              desde landing pages hasta plataformas de gestión internas. Diseñamos cada
+              proyecto pensando en tus objetivos, en la experiencia de tus usuarios y en
+              la posibilidad de escalar en el futuro.
+            </p>
+          </div>
+          <div class="service-image">
+            <img src="./img/code.jpg" alt="Desarrollo web a medida">
+          </div>
 
-    <!-- Servicio 2 -->
-    <article class="service-card">
-      <div class="service-image">
-        <img src="./img/design.jpg" alt="Diseño responsive">
-      </div>
-      <div class="service-info">
-      <h3>Diseño y maquetación frontend responsive</h3>
-      <p>
-        Diseñamos interfaces limpias, modernas y accesibles que se adaptan a
-        cualquier dispositivo. Convertimos esos diseños en código HTML, CSS y
-        JavaScript optimizado, cuidando el rendimiento y las buenas prácticas.
-      </p>
-      </div>
-    </article>
+        </article>
 
-    <!-- Servicio 3 -->
-    <article class="service-card">
-      <div class="service-info">
-      <h3>Integración de servicios y automatización</h3>
-      <p>
-        Conectamos tu web con APIs externas como pasarelas de pago, analítica,
-        newsletters o CRM. Automatizamos procesos para reducir tareas manuales y
-        que puedas centrarte en hacer crecer tu negocio.
-      </p>
-      </div>
-      <div class="service-image">
-        <img src="./img/dashboard.jpg" alt="Integración de servicios">
-      </div>
-      
-    </article>
+        <!-- Servicio 2 -->
+        <article class="service-card">
+          <div class="service-image">
+            <img src="./img/design.jpg" alt="Diseño responsive">
+          </div>
+          <div class="service-info">
+            <h3>Diseño y maquetación frontend responsive</h3>
+            <p>
+              Diseñamos interfaces limpias, modernas y accesibles que se adaptan a
+              cualquier dispositivo. Convertimos esos diseños en código HTML, CSS y
+              JavaScript optimizado, cuidando el rendimiento y las buenas prácticas.
+            </p>
+          </div>
+        </article>
 
-    <!-- Servicio 4 -->
-    <article class="service-card">
-      <div class="service-image">
-        <img src="./img/seo.jpg" alt="Optimización">
+        <!-- Servicio 3 -->
+        <article class="service-card">
+          <div class="service-info">
+            <h3>Integración de servicios y automatización</h3>
+            <p>
+              Conectamos tu web con APIs externas como pasarelas de pago, analítica,
+              newsletters o CRM. Automatizamos procesos para reducir tareas manuales y
+              que puedas centrarte en hacer crecer tu negocio.
+            </p>
+          </div>
+          <div class="service-image">
+            <img src="./img/dashboard.jpg" alt="Integración de servicios">
+          </div>
+
+        </article>
+
+        <!-- Servicio 4 -->
+        <article class="service-card">
+          <div class="service-image">
+            <img src="./img/seo.jpg" alt="Optimización">
+          </div>
+          <div class="service-info">
+            <h3>Optimización, rendimiento y mantenimiento</h3>
+            <p>
+              Analizamos tu sitio para mejorar velocidad de carga, SEO técnico y
+              seguridad básica. Acompañamos tu proyecto con actualizaciones y pequeñas
+              mejoras continuas para que tu web se mantenga estable y preparada para
+              seguir creciendo.
+            </p>
+          </div>
+        </article>
       </div>
-      <div class="service-info">
-      <h3>Optimización, rendimiento y mantenimiento</h3>
-      <p>
-        Analizamos tu sitio para mejorar velocidad de carga, SEO técnico y
-        seguridad básica. Acompañamos tu proyecto con actualizaciones y pequeñas
-        mejoras continuas para que tu web se mantenga estable y preparada para
-        seguir creciendo.
-      </p>
+    </section>
+
+    <!-- CTA ----------------------------------------------------------------------------->
+    <section class="cta-section" id="contact">
+      <div class="cta-content">
+        <h2>¿Listo para tejer tu presencia digital?</h2>
+        <p>Contáctanos hoy y comencemos a diseñar la solución perfecta para tu negocio.</p>
+        <a href="mailto:contacto@urdimbre.dev" class="cta-button">
+          Hablemos de tu Proyecto
+        </a>
       </div>
-    </article>
-  </div>
-</section>
+    </section>
 
   </main>
+
+  <!-- Footer ------------------------------------------------------------------- -->
+  <footer class="main-footer">
+    <div class="footer-content">
+      <div class="footer-brand">
+        <a href="#hero"><img src="./img/LogoSquare.png" alt="Logo Urdimbre"></a>
+        <p class="brand-description">Especialistas en desarrollo web y automatización.</p>
+      </div>
+      <div class="footer-links">
+        <h4>Navegación</h4>
+        <ul>
+          <li><a href="#hero">Inicio</a></li>
+          <li><a href="#services">Servicios</a></li>
+          <li><a href="#contact">Contacto</a></li>
+        </ul>
+      </div>
+      <div class="footer-contact">
+        <h4>Contacto</h4>
+        <p>Email: <a href="mailto:info@urdimbre.dev">info@urdimbre.dev</a></p>
+        <p>Teléfono: +34 924 55 55 55</p>
+        <p>Mérida, Extremadura</p>
+      </div>
+    </div>
+    <div class="footer-legal">
+      <p>&copy; 2025 Urdimbre. Todos los derechos reservados.</p>
+    </div>
+  </footer>
+
+
 </body>
 
 </html>
