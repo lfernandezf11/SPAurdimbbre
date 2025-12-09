@@ -1,10 +1,9 @@
 :root {
   --primary-color: rgb(245, 245, 245);
-  --accent-color: #580101;
-  --navbar-color: rgba(245, 245, 245, 0.7);
+  --navbar-color: rgba(245, 245, 245, 0.8);
   --letters-color: #131313;
-  --font-display: 'Bodoni Moda', serif;
-  --font-content: 'QuickSand', sans-serif;
+  --font-display: 'Lekton', monospace;
+  --font-content: 'Roboto Flex', sans-serif;
 }
 
 
@@ -13,8 +12,9 @@
   padding: 0;
   box-sizing: border-box;
   /* outline: 2px solid red !important; */
-
 }
+
+
 
 /* Importante para no generar scroll horizontal inncesario. Al no aplicar la regla en *, 
 no afecta a contenedores con scroll horizontal legítimo (ej.: carrusel) */
@@ -38,13 +38,14 @@ h6 {
 
 body {
   background: var(--primary-color);
+  color: var(--letters-color);
 }
 
 main {
   display: flex;
   flex-direction: column;
-  gap: 8rem;
-  padding: 2rem 4rem;
+  gap: 3rem;
+  padding: 2rem;
 }
 
 img {
@@ -53,11 +54,12 @@ img {
 }
 
 a {
-  color: inherit;
   text-decoration: none;
 }
 
-
+h2 {
+  line-height: 1.8rem;
+}
 
 /* HEADER: LOGO Y LINKS DE NAVEGACIÓN -----------------------------*/
 .navbar {
@@ -90,9 +92,6 @@ a {
   font-size: 1.4rem;         
 }
 
-.menu-toggle:hover {
-}
-
 .nav-links {
   display: flex;
   gap: 1.5rem;
@@ -103,8 +102,7 @@ a {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  padding: 0.5rem 0.9rem;
-  border-radius: 999px;
+  padding: 0.7rem 1rem;
   background: transparent;
   color: var(--accent-color);
   overflow: hidden;
@@ -120,14 +118,18 @@ a {
   padding: 1rem;
   padding-top: 7rem;
   justify-content: flex-end;
-  background-image: url("./img/campo.jpg");
+  background-image: url("./img/webs\ 1.png");
   background-size: cover;
 }
 
 .logo-container {
   padding: 5rem;
   backdrop-filter: blur(6px);
-  width: 45%;
+  width: 35%;
+}
+
+.logo-container img {
+  object-fit: contain;
 }
 
 .hero h2 {
@@ -137,10 +139,62 @@ a {
   margin-top: auto;
   align-self: start;
   padding: 3rem 0 1rem 1rem;
-  font-weight: 500;
-  font-size: 1.8rem;
-  line-height: 1.8rem;
+  font-weight: 600;
+  font-size: 2rem;
+}
 
+/* Servicios ---------------------------------------------*/
+.services-container {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  align-items: center;
+}
+
+.service-card:nth-child(odd) {
+  padding-left: 10vw;
+}
+
+.service-card:nth-child(even) {
+  padding-right: 10vw;
+}
+
+.service-card {
+  width: 75vw;
+  border-radius: 1rem;
+  padding: 1rem;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 2rem;
+  opacity: 0;
+  transform: translateX(110%);  /* fuera del viewport */
+}
+
+
+.service-image {
+  width: 100%; 
+  height: 25rem;
+  border-radius: 0.8rem;
+  overflow: hidden;
+}
+
+.service-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.service-info {
+  padding: 1rem;
+  width: 65%;
+}
+
+.service-info h3 {
+  font-size: 2.5rem;
+  line-height: 2.2rem;
+  margin-bottom: 1.2rem;
+  font-weight: bold;
 }
 
 
@@ -152,19 +206,64 @@ a {
         Tablet: 768px; 
 */
 
+/* PANTALLA NORMAL */
+
+@media(max-width: 1024px) {
+  .service-card:nth-child(odd) {
+  padding-left: 8vw;
+}
+
+.service-card:nth-child(even) {
+  padding-right: 8vw;
+}
+  
+  .service-card {
+    width: 80vw;
+  }
+}
+
 /* TABLET */
 @media (max-width: 768px) {
+   main {
+    gap: 5rem;
+  }
+  .hero {
+    min-height: auto;
+  }
+  
   .logo-container {
-    padding: 5rem;
-    width: 75%;
+    padding: 4.5rem;
+    width: 70%;
   }
 
   .hero h2 {
     font-size: 1.6rem;
   }
 
-  main {
-    gap: 5rem;
+  .services-container {
+    gap: 4rem;
+  }
+.service-card:nth-child(odd) {
+  padding-left: 1rem;
+}
+
+.service-card:nth-child(even) {
+  padding-right: 1rem;
+}
+.service-card {
+    flex-direction: column;
+    gap: 0;
+  }
+
+  .service-info {
+    order: 1;  
+    width: 100%; 
+    padding: 0;
+    margin-bottom: 1.2rem;
+  }
+
+  .service-image {
+    order: 2;   /* imagen debajo */
   }
 }
 
@@ -216,4 +315,26 @@ a {
     padding: 3rem 0 0 0;
   }
 
+
+  .services-container {
+    gap: 3rem;
+  }
+.service-card:nth-child(odd) {
+  padding-left: 0;
+}
+
+.service-card:nth-child(even) {
+  padding-right: 0;
+}
+.service-card {
+    flex-direction: column;
+    gap: 0;
+    padding: 0;
+    padding-top: 1rem;
+  }
+
+  .service-image {
+    width: 100%;
+    height: auto;
+  }
 }
